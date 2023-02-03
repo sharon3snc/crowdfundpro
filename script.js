@@ -10,14 +10,16 @@ function acumula (){
 }
 
 //contador de donantes
-let cont=0;
-const valor= document.getElementById("valor");
-const btnConfirmar= document.getElementById("confirmar")
+var cont=0;
+var pvalor= document.getElementById("valor");
+var btnConfirmar= document.getElementById("confirmar")
 
-btnConfirmar.onclick = function(){
+btnConfirmar.onclick = function (){
     cont++;
-    valor.innerHTML= cont;
+    pvalor.textContent= cont;
 }
+
+
 
 function obtenerdatos(){
         var nombre= document.getElementById ("name").value;
@@ -25,7 +27,7 @@ function obtenerdatos(){
         var comentario= document.getElementById ("cuentame").value;
 
         let mensajefinal= "Muchas gracias, " + nombre;
-        prompt(mensajefinal);
+        console.log(mensajefinal);
 }
 
 
