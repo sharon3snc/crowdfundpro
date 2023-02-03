@@ -259,16 +259,16 @@ footer{
 /* formato del aside */
 aside {
     position: fixed;
-    top:80px;
+    top:75px;
     left: 70%;
     width: 30%;
-    margin-left: 5px;
+    margin-left: 2px;
     float: right;
     background-color: whitesmoke;
 }
 
 .form{
-    margin: 10px 10px;
+    margin: 0px 5px 5px 5px;
     padding: 20px 20px 20px 20px;
     border:0.1px solid #ccc;
     background-color: #fdfdfd;
@@ -277,6 +277,24 @@ aside {
     height: 400px;
 }
 
+.progress {
+    height: 10px;
+    width: 100%;
+    border: 1px solid #333333;
+    border-radius: 4px;
+    background-color: #b7b7b7;
+    margin-bottom: 15px;
+}
+ 
+.progress-bar {
+    height: 100%;
+    background: #333333;
+    display: flex;
+    align-items: center;
+    transition: width 0.25s;
+    border-radius: 4px;
+}
+ 
 
 input[type=text], select {
     width: 100%;
