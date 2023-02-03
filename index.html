@@ -2,16 +2,17 @@
 <html lang="es">
     <head>
         <meta charset="utf-8" />
-        <link rel="icon" type="image/x-icon" href="/logo corto.png" />
+        <link rel="icon" type="image/x-icon" href="/imagenes/logo corto.png" />
         <title>IRONÍA</title>
         <link rel="stylesheet" href="styles.css">
+        <script src="script2.js"></script>
     </head>
 
     <body>
     <div id="page-container">
         <div id="content-wrap">
             <header>
-                <div class="nombre"> <img src="./logo3.png" alt="logo" width="150px"/> </div>
+                <div class="nombre"> <img src="imagenes/logo3.png" alt="logo" width="150px"/> </div>
                 <nav>
                     <ul>
                     <li> <a href="#top"> Inicio </a> </li>
@@ -25,36 +26,53 @@
             <aside>
                 <div class="form">
                     <div class="subt"> <h1>Recaudación</h1> </div>
-                   <div> X recaudado de Total </div>
-                   </br>
-                   <div class="progress">
+                    <div> X recaudado de 30.000€ totales </div>
+                    </br>
+                    <div class="progress">
                         <div class="progress-bar" style="width:75%;">
                         </div>
                     </div>
-                    <div> Y donaciones </div>
+                    <div id="valor"> 0 </div>
                    <textarea type="text" name="cuentame" id="cuentame"> </textarea>
                    <button onclick="window.modal.showModal();"> Contribuir </button> </a>
-                   
-                   <dialog id="modal">
-                    <h2>Ironía</h2>
-                    <p>Este es un texto de ejemplo dentro de una ventana modal</p>
-                    <button onclick="window.modal.close();">Cerrar</button>
-                    </dialog>
-
-                   <hr size="1">
-                   
-                   <div>
-                    Opiniones
-                   </div>
-                </div> 
+                    <hr size="1">
+                    <div>
+                    Donantes recientes
+                    </div>
+                </div>
             </aside>
+            
+            <dialog id="modal">
+                       <div>
+                          <div> <b>¡Con tu ayuda podremos cumplir nuestro sueño!</b></div>
+                          </br>
+                        <label for="name">Nombre</label>
+                        <br/>
+                        <input type="text" name="name" id="name" required />
+                        </br>
+                        <label for="aporte"> ¿Cuanto quieres aportar? </label>
+                        <br/>
+                        <input type="text" name="aporte" id="aporte" required />
+                        <br/>
+                        <label for="cuentame">Déjanos un comentario:</label>
+                        <br/>
+                        <textarea type="text" name="cuentame" id="cuentame"> </textarea>
+                        <br />
+                    </div>
+                    <button onclick="window.modal.close();" id="confirmar">Confirmar</button>
+                    <button onclick="window.modal.close();">Cancelar</button>
+            </dialog>
+
+                
+                   
+           
 
             <section>
                 <div class="fotos">
-                    <div class="column"><img src="/2.jpg" alt="2" style="width:100%"/></div> 
-                    <div class="column"><img src="/4.jpg" alt="4" style="width:100%"/> </div>
-                    <div class="column"><img src="/6.jpg" alt="6" style="width:100%"/> </div>
-                    <div class="column"><img src="/3.jpg" alt="3" style="width:100%"/> </div>
+                    <div class="column"><img src="/imagenes/2.jpg" alt="2" style="width:100%"/></div> 
+                    <div class="column"><img src="/imagenes/4.jpg" alt="4" style="width:100%"/> </div>
+                    <div class="column"><img src="/imagenes//6.jpg" alt="6" style="width:100%"/> </div>
+                    <div class="column"><img src="/imagenes/3.jpg" alt="3" style="width:100%"/> </div>
                 </div>
 
                 <div class="hola">
@@ -71,7 +89,7 @@
                     <div class="cardcontainer">
                         <div class="column2">
                             <div class="card">
-                            <img src="/andrea.jpg" alt="Andrea" style="width:100%"/>
+                            <img src="/imagenes/andrea.jpg" alt="Andrea" style="width:100%"/>
                             <div class="title"> <h3>Andrea Gutierrez</h3> 
                             <p> Graduada en Diseño de Moda, ganadora del VI concurso de estudiantes 
                                 de diseño de moda organizado por la Comunidad de Madrid, talento puro.</p> 
@@ -81,7 +99,7 @@
 
                         <div class="column2">
                             <div class="card">
-                                <img src="/sonia.jpg" alt="Sonia" style="width:100%"/>
+                                <img src="/imagenes/sonia.jpg" alt="Sonia" style="width:100%"/>
                                 <div class="title"> <h3>Sonia Ortiz</h3> 
                                 <p>Graduada en Diseño de Moda, Master en diseño de accesorios y complementos.
                                 Ha estudiado en Marid y Nueva York, aportando una visión global al proyecto.</p> 
@@ -91,7 +109,7 @@
 
                         <div class="column2">
                             <div class="card">
-                                <img src="/alba.jpg" alt="Alba" style="width:100%"/>
+                                <img src="/imagenes/alba.jpg" alt="Alba" style="width:100%"/>
                                 <div class="title"> <h3> Alba Esteban </h3> 
                                 <p>Graduada en Diseño de Moda, un año trabajando en Dior Paris.</p>
                                 <p>Trae todo el know how de las mejores boutiques francesas. </p> 
@@ -105,7 +123,7 @@
                     <div class="subt"><h1>Sostenible y rompedora</h1></div>
                     
                     <div class="leather">
-                        <img src="/leather.jpeg" alt="pieles" width="40%" class="piel">
+                        <img src="/imagenes/leather.jpeg" alt="pieles" width="40%" class="piel">
                         <div class="container1">
                         <div class="rtb"> <h2>Piel reciclada </h2> 
                         <div>  Utilizamos excedentes de pieles de casas de lujo y curtiembres de alta calidad. 
@@ -132,7 +150,7 @@
                 <div class="contribuye">
                     <div class="subt"> <h1>Contribuye</h1> </div>
                     <div class="container3">
-                    <img src="/5.jpg" alt="collar" width="300px" height="430px" class="piel"/>
+                    <img src="/imagenes/5.jpg" alt="collar" width="300px" height="430px" class="piel"/>
                     <div class="conteuro">
                         <div class="euro"> <b>10€ </b> </div>
                         </br>
@@ -155,15 +173,15 @@
                 <div class="donantes">
                     <div class="subt"> <h1>Nuestros donantes opinan </h1> </div>
                     <div class="container4">
-                    <div class="rtb"> <h2>María H. </h2> </div>
-                    <div> "No puedo esperar a que salga la colección, va a ser un super éxito." </div>
-                    <hr size="1">
-                    <div class="rtb"> <h2>Vanesa N. </h2> </div>
-                    <div> "Ya recibí mi collar y es maravilloso, tiene una calidad premium." </div>
-                    <hr size="1">
-                    <div class="rtb"> <h2>Laura M. </h2> </div>
-                    <div> "Seré la primera en pedir un bolso de la colección." </div>
-                    <hr size="1">
+                        <div class="rtb"> <h2>María H. </h2> </div>
+                        <div> "No puedo esperar a que salga la colección, va a ser un super éxito." </div>
+                        <hr size="1">
+                        <div class="rtb"> <h2>Vanesa N. </h2> </div>
+                        <div> "Ya recibí mi collar y es maravilloso, tiene una calidad premium." </div>
+                        <hr size="1">
+                        <div class="rtb"> <h2>Laura M. </h2> </div>
+                        <div> "Seré la primera en pedir un bolso de la colección." </div>
+                        <hr size="1">
                     </div>
                 </div>
 
@@ -174,7 +192,7 @@
             </br>
                 
                 <div class="container5">
-                <div class="nombre"> <img src="./logo corto.png" alt="logo" width="50px"/> </div>
+                <div class="nombre"> <img src="/imagenes/logo corto.png" alt="logo" width="50px"/> </div>
                 <div class="foot"> <a href=""> Información legal </a> </div>
                 <div class="foot"> <a href=""> Política de privacidad </a> </div>
                 <div class="foot"><a href="mailto:info@ironia.es"> Contacto</a> </div> 
