@@ -33,10 +33,18 @@
                     </div>
                     <div> Y donaciones </div>
                    <textarea type="text" name="cuentame" id="cuentame"> </textarea>
-                   <a href="/form.html"> <button> Contribuir </button> </a>
+                   <button onclick="window.modal.showModal();"> Contribuir </button> </a>
+                   
+                   <dialog id="modal">
+                    <h2>Ironía</h2>
+                    <p>Este es un texto de ejemplo dentro de una ventana modal</p>
+                    <button onclick="window.modal.close();">Cerrar</button>
+                    </dialog>
+
                    <hr size="1">
+                   
                    <div>
-                    Comentarios
+                    Opiniones
                    </div>
                 </div> 
             </aside>
