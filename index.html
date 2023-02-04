@@ -5,7 +5,7 @@
         <link rel="icon" type="image/x-icon" href="/imagenes/logo corto.png" />
         <title>IRONÍA</title>
         <link rel="stylesheet" href="styles.css">
-        <script src="/script.js"></script>
+        <script src="./script.js"></script>
     </head>
 
     <body>
@@ -33,12 +33,13 @@
                         </div>
                     </div>
                     <div id="valor">0</div>
-                   <textarea type="text" name="cuentame" id="cuentame"> </textarea>
                    <button onclick="window.modal.showModal();"> Contribuir </button> </a>
                     <hr size="1">
                     <div>
                     Donantes recientes
                     </div>
+                    <div id="username"></div>
+                    <div id="postList"></div>
                 </div>
             </aside>
             
@@ -54,18 +55,17 @@
                         <br/>
                         <input type="text" name="aporte" id="aporte" required />
                         <br/>
-                        <label for="cuentame">Déjanos un comentario:</label>
+                        <label for="cuentame"> Déjanos un comentario: </label>
                         <br/>
-                        <textarea type="text" name="cuentame" id="cuentame"> </textarea>
-                        <br />
+                        <input type="text" name="cuentame" id="cuentame" required />
+                        <br/>
                     </div>
-                    <button onclick="window.modal.close();" id="confirmar">Confirmar</button>
+                    <button onclick="obtenerdatos()" id="confirmar">Confirmar</button>
                     <button onclick="window.modal.close();">Cancelar</button>
             </dialog>
 
                 
-                   
-           
+
 
             <section>
                 <div class="fotos">
@@ -192,7 +192,6 @@
             </br>
                 
                 <div class="container5">
-                <div class="nombre"> <img src="/imagenes/logo corto.png" alt="logo" width="50px"/> </div>
                 <div class="foot"> <a href=""> Información legal </a> </div>
                 <div class="foot"> <a href=""> Política de privacidad </a> </div>
                 <div class="foot"><a href="mailto:info@ironia.es"> Contacto</a> </div> 
