@@ -10,29 +10,49 @@ function obtenerdatos() {
         let mensajefinal= "Muchas gracias, " + nombre;
         console.log(mensajefinal);
         window.modal.close(modal);
+
+        comment(nombre, comentario);
+        comment2(nombre,comentario);
+        acumula (donacion);
+        contador();
 }
 
 //muestro comentarios
-function comentario (postList){
-    var HTML= '';
+function comment(name, cuentame){
+    var HTML= document.getElementById("postList").innerHTML;
 
         HTML += `
         <div class="title">
-        <div> ${"name"} </div>
+        <div> ${name} </div>
         </div>
         <div class="post">
-        <div> ${"cuentame"} </div>
+        <div> ${cuentame} </div>
         </div>
         `
     document.getElementById("postList").innerHTML= HTML;
 }
 
+//muestro comentarios
+function comment2(name, cuentame){
+    var HTML= document.getElementById("postList2").innerHTML;
+
+        HTML += `
+        <div class="title">
+        <div> ${name} </div>
+        </div>
+        <div class="post">
+        <div> ${cuentame} </div>
+        </div>
+        `
+    document.getElementById("postList2").innerHTML= HTML;
+}
+
 //Acumula donaciones
-function acumula (){
+function acumula (aporte){
     var suma=0;
     var donacion= 0;
 
-    donacion= parseInt("aporte");
+    donacion= parseInt(aporte);
     suma= suma+ donacion;
     console.log(suma)
 } 
