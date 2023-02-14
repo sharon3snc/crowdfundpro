@@ -63,12 +63,19 @@ function acumula (aporte){
 
 //Barra de porcentaje
 function progress (aporte){
-    var percent=10;
-    percentnuevo= Math.round((((parseInt(aporte))/30000)*100));
+    var total2=10;
+    nuevo= parseInt(aporte);
 
-    percentnuevo = (parseInt(percentnuevo) + parseInt(aporte));
+    total2 = document.getElementById("progressBar").style.width;
 
-    console.log("el % que llevamos es: " + percentnuevo);
+    total2 = (total2 == null || total2 == undefined || total2 == "") ? 10 : total2;
+
+    total2 = (parseInt(total2) + ((parseInt(aporte))/300));
+
+    document.getElementById("progressBar").style.width = (total2+"%");
+
+    console.log("el % que llevamos es: " + total2);
+    
 } 
 
 
@@ -82,5 +89,11 @@ function contador(){
 function updateDisplay (val) {
 document.getElementById("valor").innerHTML=val;
 }
+
+$("#modal").on('hidden.bs.modal', function (e) {
+    $('#modal').find("input[type=text]").val("");
+})
+
+
 
 

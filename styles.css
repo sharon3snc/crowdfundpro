@@ -278,7 +278,7 @@ aside {
     height: 90%;
 }
 
-.progress {
+#progress {
     height: 10px;
     width: 100%;
     border: 1px solid #333333;
@@ -288,7 +288,7 @@ aside {
     margin-top:7px;
 }
  
-.progress-bar {
+#progressBar {
     height: 100%;
     background: #333333;
     display: flex;

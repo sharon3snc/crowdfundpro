@@ -16,7 +16,7 @@
                 <nav>
                     <ul>
                     <li> <a href="#top"> Inicio </a> </li>
-                    <li> <a href="/form.html" target="_self"> Contribuye </a> </li>
+                    <li> <a onclick="window.modal.showModal();" target="_self"> Contribuye </a> </li>
                     <li> <a href="mailto:info@ironia.es"> Contacto</a> </li>
                     </ul>
                 </nav>
@@ -30,8 +30,9 @@
                     <span id="spTotal"> 3000 </span>
                     <span> recaudado de 30.000€ totales </span>
                     </div>
-                    <div class="progress">
-                        <div class="progress-bar" style="width:10%;">
+
+                    <div id="progress">
+                        <div id="progressBar" style="width:10%;">
                         </div>
                     </div>
                     <span id="valor">0</span>
@@ -168,7 +169,7 @@
                     </div>
                     </br>
                     </div>
-                    <a href="/form.html"> <button> Quiero contribuir </button> </a>
+                    <a href="#top"> <button> Quiero contribuir </button> </a>
                 </div>
 
                 <div class="donantes">
