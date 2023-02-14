@@ -275,7 +275,7 @@ aside {
     background-color: #fdfdfd;
     border-radius: 2px;
     box-sizing: border-box;  
-    height: 400px;
+    height: 90%;
 }
 
 .progress {
@@ -285,6 +285,7 @@ aside {
     border-radius: 4px;
     background-color: #b7b7b7;
     margin-bottom: 15px;
+    margin-top:7px;
 }
  
 .progress-bar {
