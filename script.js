@@ -14,6 +14,7 @@ function obtenerdatos() {
         comment(nombre, comentario);
         comment2(nombre,comentario);
         acumula (donacion);
+        progress(donacion);
         contador();
 }
 
@@ -48,7 +49,7 @@ function comment2(name, cuentame){
 //Acumula donaciones
 function acumula (aporte){
     var total=3000;
-    aporteporcent= parseInt(aporte);
+    aportacion= parseInt(aporte);
 
     total = document.getElementById("spTotal").innerHTML;
     total = (total == null || total == undefined || total == "") ? 3000 : total;
@@ -56,17 +57,18 @@ function acumula (aporte){
     total = (parseInt(total) + parseInt(aporte));
 
     document.getElementById("spTotal").innerHTML = total;
+    console.log("el acumulado es" + total);
 } 
 
 
 //Barra de porcentaje
 function progress (aporte){
     var percent=10;
-    var percentnuevo= percent + Math.round((parseInt(aporte))/30000);
+    percentnuevo= Math.round((((parseInt(aporte))/30000)*100));
 
     percentnuevo = (parseInt(percentnuevo) + parseInt(aporte));
 
-    console.log(percentnuevo);
+    console.log("el % que llevamos es: " + percentnuevo);
 } 
 
 
