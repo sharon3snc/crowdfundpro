@@ -16,6 +16,7 @@ function obtenerdatos() {
         acumula (donacion);
         progress(donacion);
         contador();
+
 }
 
 //muestro comentarios
@@ -30,6 +31,8 @@ function comment(name, cuentame){
         </div>
         `
     document.getElementById("postList").innerHTML= HTML;
+    document.getElementById("cuentame").value= "";
+    document.getElementById("name").value= "";
 }
 
 //muestro comentarios2
@@ -58,6 +61,8 @@ function acumula (aporte){
 
     document.getElementById("spTotal").innerHTML = total;
     console.log("el acumulado es" + total);
+
+    document.getElementById("aporte").value= "";
 } 
 
 
@@ -90,9 +95,6 @@ function updateDisplay (val) {
 document.getElementById("valor").innerHTML=val;
 }
 
-$("#modal").on('hidden.bs.modal', function (e) {
-    $('#modal').find("input[type=text]").val("");
-})
 
 
 
