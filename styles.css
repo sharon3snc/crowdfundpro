@@ -319,3 +319,6 @@ input[type=text], select {
     resize: none;    
 }
 
+#peque, #peque2 {
+    font-size: 12px;
+}

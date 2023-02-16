@@ -11,8 +11,8 @@ function obtenerdatos() {
         console.log(mensajefinal);
         window.modal.close(modal);
 
-        comment(nombre, comentario);
-        comment2(nombre,comentario);
+        comment(nombre, donacion, comentario);
+        comment2(nombre,donacion, comentario);
         acumula (donacion);
         progress(donacion);
         contador();
@@ -20,12 +20,13 @@ function obtenerdatos() {
 }
 
 //muestro comentarios
-function comment(name, cuentame){
+function comment(name, aporte, cuentame){
     var HTML= document.getElementById("postList").innerHTML;
 
         HTML += `
         <div class="title">
         <div><b> ${name} </b></div>
+        <span id="peque"> ${aporte} € </span>
         <div> ${cuentame} </div>
         </br>
         </div>
@@ -36,12 +37,13 @@ function comment(name, cuentame){
 }
 
 //muestro comentarios2
-function comment2(name, cuentame){
+function comment2(name, aporte, cuentame){
     var HTML= document.getElementById("postList2").innerHTML;
 
         HTML += `
         <div class="title">
         <div><b> ${name} </b></div>
+        <span id="peque"> ${aporte} € </span>
         <div> ${cuentame} </div>
         </br>
         </div>
